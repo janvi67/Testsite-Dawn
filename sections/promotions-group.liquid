@@ -1,79 +1,74 @@
 <h2>{{ section.settings.title }}</h2>
 
-<div style="display: flex; justify:content-center; gap:20px;">
+<div style="display: flex; justify-content: center; gap: 20px;">
     {% for block in section.blocks %}
-        {% if  block in section.blocks %}
-           <div style="display:flex; flext-direction:column;gap: 10px;">
-            <h3>{{section.settings.title }}</h3>
-            {{block.settings.image| image_url:width:500 | image_url}}
-           </div>
-    
-        {%end if%}
-    {%end for%}
-
-
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Title per block with alignment -->
+            <h3 style="text-align: {{ section.settings.title_alignment }}">{{ block.settings.title }}</h3>
+            <img src="{{ block.settings.image | image_url: width: 500 }}" alt="Promotion Image">
+        </div>
+    {% endfor %}
 </div>
-{% if settings.prmotion_name.size > 0%}
-    <p>Active prmotion:{{settings.prmotion_name}}</p>
-    {% endif %}
+
+{% if section.settings.prmotion_name %}
+    <p>Active promotion: {{ section.settings.prmotion_name }}</p>
+{% endif %}
+
 {% schema %}
-
-
-  {
-    "name": "prmotions Group",
-    "tag": "section",
-    "class": "my-wrapper-class",
-    "settings": [
-      {
-        "type": "text",
-        "label": "Title",
-        "id": "title"
-      },
-      {
-        "type":"select",
-        "label":"Title Alignment",
-        "id":"title_alignment",
-        "options": [
-            {
-                "value": "left",
-                "label":"left"
-
-            },
-            {
-                "value": "center",
-                "label":"center"
-
-            },{
-                "value": "right",
-                "label":"right"
-
-            }
-        ],
-        "default": "left"
-    }
-    ],
-    "blocks": [{
-        "type": "prmotion",
-        "name":"prmotion",
-        "settings": [{
-            "type":"text",
-            "id": "title",
-            "label": "Title"
+{
+  "name": "Promotions Group",
+  "tag": "section",
+  "class": "my-wrapper-class",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "select",
+      "label": "Title Alignment",
+      "id": "title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
         },
         {
-            "type":"image_picker",
-            "id": "image",
-            "label": "Image"
-
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
         }
-    ]
-    }],
+      ],
+      "default": "left"
+    }
     
-    "presets": [
-      {
-        "name": "prmotions Group"
-      }
-    ]
-
-  }
+  ],
+  "blocks": [
+    {
+      "type": "prmotion",
+      "name": "Promotion Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Promotion Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Promotion Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotions Group"
+    }
+  ]
+}
 {% endschema %}
