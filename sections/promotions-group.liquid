@@ -1,24 +1,46 @@
-<h2>{{section.settings.title}}</h2>
-
+<h2>{{ section.settings.title }}</h2>
 
 
 {% schema %}
-{
-    "name":"prmotions Group",
-    "tag":"section",
+  {
+    "name": "prmotions Group",
+    "tag": "section",
     "class": "my-wrapper-class",
     "settings": [
-        {
-            "type": "text",
-            "label": "Title",
-            "id":"title"
-        }
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title"
+      },
+      {
+        "type":"select",
+        "label":"Title Alignment",
+        "id":"title_alignment",
+        "options": [
+            {
+                "value": "left",
+                "label":"left"
+
+            },
+            {
+                "value": "center",
+                "label":"center"
+
+            },{
+                "value": "right",
+                "label":"right"
+
+            }
+        ],
+        "default": "left"
+    }
     ],
+    
     "presets": [
-        {
-            "name": "prmotions Group"
-        }
+      {
+        "name": "prmotions Group"
+      }
     ]
 
-}
-    {%endschema%}
+  }
+{% endschema %}
