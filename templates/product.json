@@ -55,6 +55,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "easyreviews_star_rating_XkEkfq": {
+          "type": "shopify://apps/easyreviews/blocks/star_rating/1341251b-09d7-46f3-ba6a-e732a50e97a5",
+          "settings": {}
         }
       },
       "block_order": [
@@ -65,7 +69,8 @@
         "price",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "easyreviews_star_rating_XkEkfq"
       ],
       "settings": {
         "enable_sticky_info": true,
