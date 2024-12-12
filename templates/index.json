@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "6a3bb789-ce10-45f5-ae67-e2063ef8c76b": {
@@ -5,7 +14,10 @@
       "blocks": {
         "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-0": {
           "type": "heading",
-          "settings": { "heading": "Generated test data", "heading_size": "h1" }
+          "settings": {
+            "heading": "Generated test data",
+            "heading_size": "h1"
+          }
         },
         "template--18309637636369__6a3bb789-ce10-45f5-ae67-e2063ef8c76b-168016437761699a6e-1": {
           "type": "text",
@@ -77,7 +89,10 @@
       "blocks": {
         "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-0": {
           "type": "heading",
-          "settings": { "heading": "Stay hydrated", "heading_size": "h1" }
+          "settings": {
+            "heading": "Stay hydrated",
+            "heading_size": "h1"
+          }
         },
         "template--18309637636369__f1552b18-6017-4231-810d-74e61da22c37-1680164422d7fb2efc-1": {
           "type": "text",
@@ -119,15 +134,21 @@
       "blocks": {
         "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-0": {
           "type": "featured_collection",
-          "settings": { "collection": "hydrogen" }
+          "settings": {
+            "collection": "hydrogen"
+          }
         },
         "template--18309637636369__38cdf60f-e431-43b5-aac3-7e6215447d67-1680164898782d94ce-1": {
           "type": "featured_collection",
-          "settings": { "collection": "automated-collection" }
+          "settings": {
+            "collection": "automated-collection"
+          }
         },
         "featured_collection_jQ6Myr": {
           "type": "featured_collection",
-          "settings": { "collection": "ride-the-snow" }
+          "settings": {
+            "collection": "ride-the-snow"
+          }
         }
       },
       "block_order": [
@@ -147,12 +168,28 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "17340060787451dd7f": {
+      "type": "apps",
+      "blocks": {
+        "easyreviews_star_rating_mqTXUf": {
+          "type": "shopify://apps/easyreviews/blocks/star_rating/1341251b-09d7-46f3-ba6a-e732a50e97a5",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "easyreviews_star_rating_mqTXUf"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
     "featured_collection",
     "f1552b18-6017-4231-810d-74e61da22c37",
-    "38cdf60f-e431-43b5-aac3-7e6215447d67"
+    "38cdf60f-e431-43b5-aac3-7e6215447d67",
+    "17340060787451dd7f"
   ]
 }
